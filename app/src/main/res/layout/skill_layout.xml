@@ -1,57 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Academic profile"
-        android:textAllCaps="true"
-        android:textAlignment="center"
+        android:text="skills"
         android:textSize="@dimen/header"
-        android:textColor="#000000"/>
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/clg"
-        android:textSize="@dimen/title"
-        android:textColor="#000000"/>
+        android:text="@string/s1"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/clg_details"/>
+        android:text="@string/s2"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/clg_per"/>
+        android:text="@string/s3"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hsc"
-        android:textSize="@dimen/title"
-        android:textColor="#000000"/>
-
+        android:text="@string/s4"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hsc_details" />
+        android:text="@string/s5"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hsc_per"/>
+        android:text="@string/s6"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sslc"
-        android:textSize="@dimen/title"
-        android:textColor="#000000"/>
+        android:text="@string/s7"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sslc_details"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sslc_per"/>
+        android:text="@string/s8"/>
 </LinearLayout>

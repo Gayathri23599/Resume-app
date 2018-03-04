@@ -8,10 +8,25 @@
             android:title="About me" />
     <item
         android:id="@+id/edu"
-        android:title="Education" />
+        android:title="Academics" />
     <item
         android:id="@+id/project"
         android:title="Projects" />
+    <item
+            android:id="@+id/skills"
+            android:title="Skills"/>
+    <item
+        android:id="@+id/roles"
+        android:title="Roles and Responsibilities"/>
+    <item
+        android:id="@+id/work"
+        android:title="Work experience"/>
+    <item
+        android:id="@+id/achievements"
+        android:title="Achievements and Interests"/>
+    <item
+        android:id="@+id/contact"
+        android:title="Contact details"/>
 </group>
 
 </menu>
