@@ -1,6 +1,8 @@
 package com.example.gayathri.resume;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -15,6 +17,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -133,14 +138,31 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.facebook.com/gayathri.23599"));
         startActivity(Intent.createChooser(intent,"Complete action using"));
     }
-    public void mail_open(View v){
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("message/rfc822");
-        intent.setData(Uri.parse("iamanifs@gmail.com"));
-        //intent.setClassName("com.google.android.gm","com.google.android.gm.ComposeActivityGmail");
-        intent.setPackage("com.google.android.gm");
-        intent.putExtra(Intent.EXTRA_EMAIL,new String[] { "iamanifs@gmail.com" });
-        startActivity(Intent.createChooser(intent,"Complete action using"));
+    public void mail_open(View v) {
+        Intent intent = new Intent(Intent.ACTION_SENDTO);
+        intent.setType("text/html");
+        /*final PackageManager pm = getPackageManager();
+        final List<ResolveInfo> matches = pm.queryIntentActivities(intent, 0);
+        ResolveInfo best = null;
+        for (final ResolveInfo info : matches) {
+            if (info.activityInfo.packageName.endsWith(".gm") || info.activityInfo.name.toLowerCase().contains("gmail")) {
+                best = info;
+                break;
+            }
+        }
+        if (best != null) {
+            intent.setClassName(best.activityInfo.packageName, best.activityInfo.name);
+        }*/
+
+        intent.setData(Uri.parse("mailto:iamanifs@gmail.com"));
+
+
+        try {
+            startActivity(intent);
+
+        } catch (android.content.ActivityNotFoundException ex) {
+            Toast.makeText(MainActivity.this, "Error Sending Email,Try Later.", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
